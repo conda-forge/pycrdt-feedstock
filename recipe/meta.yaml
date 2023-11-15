@@ -1,7 +1,4 @@
 {% set maturin_version = ">=1.2.3,<2" %}
-{% set maturin_version = ">=1.2.3,<2" %}
-{% set maturin_version = ">=1.2.3,<2" %}
-{% set maturin_version = ">=1.2.3,<2" %}
 {% set version = "0.4.2" %}
 
 package:
