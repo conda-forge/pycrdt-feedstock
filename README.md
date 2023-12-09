@@ -3,13 +3,13 @@ About pycrdt-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pycrdt-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/davidbrochart/pycrdt
+Home: https://github.com/jupyter-server/pycrdt
 
 Package license: MIT
 
 Summary: CRDTs based on Yrs
 
-Development: https://github.com/davidbrochart/pycrdt
+Development: https://github.com/jupyter-server/pycrdt
 
 Current build status
 ====================
