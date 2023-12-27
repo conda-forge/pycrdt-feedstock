@@ -1,9 +1,5 @@
 {% set maturin_version = ">=1.2.3,<2" %}
-{% set maturin_version = ">=1.2.3,<2" %}
-{% set maturin_version = ">=1.2.3,<2" %}
-{% set maturin_version = ">=1.2.3,<2" %}
-{% set maturin_version = ">=1.2.3,<2" %}
-{% set version = "0.8.1" %}
+{% set version = "0.8.2" %}
 
 package:
   name: pycrdt
@@ -11,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pycrdt/pycrdt-{{ version }}.tar.gz
-  sha256: cdcce2a883b01ac43b4e00687319699b274f9dcfb68cd29ae004cc5f08dbcff3
+  sha256: 50817c55c8c4dd0f6df0f67f34c34bedc3fba440019b1e8d87b0e0579b6d79d8
 
 build:
   number: 0
   script:
-    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+    - {{ PYTHON }} -m pip install . -vv
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
 
 requirements:
@@ -41,6 +37,11 @@ test:
     - pip check
   imports:
     - pycrdt
+    - pycrdt.doc
+    - pycrdt.text
+    - pycrdt.array
+    - pycrdt.map
+    - pycrdt.transaction
 
 about:
   home: https://github.com/jupyter-server/pycrdt
