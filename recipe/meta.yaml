@@ -1,3 +1,4 @@
+{% set maturin_version = ">=1.2.3,<2" %}
 {% set version = "0.8.2" %}
 
 package:
@@ -16,14 +17,14 @@ build:
 
 requirements:
   build:
-    - python
+    - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - maturin {{ maturin_version }}          # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
-    - maturin
   host:
-    - maturin
+    - maturin {{ maturin_version }}
     - pip
     - python
   run:
