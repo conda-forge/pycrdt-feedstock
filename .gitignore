@@ -10,4 +10,7 @@
 !/recipe/**
 !/.ci_support/**
 
+!/build_artifacts/**
+/build_artifacts
+
 *.pyc
