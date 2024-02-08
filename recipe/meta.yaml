@@ -42,11 +42,11 @@ test:
     - pip check
   imports:
     - pycrdt
-    - pycrdt.doc
-    - pycrdt.text
-    - pycrdt.array
-    - pycrdt.map
-    - pycrdt.transaction
+    - pycrdt._doc
+    - pycrdt._text
+    - pycrdt._array
+    - pycrdt._map
+    - pycrdt._transaction
 
 about:
   home: https://github.com/jupyter-server/pycrdt
