@@ -12,7 +12,8 @@
 {% set maturin_version = ">=1.4.0,<2" %}
 {% set maturin_version = ">=1.4.0,<2" %}
 {% set maturin_version = ">=1.4.0,<2" %}
-{% set version = "0.8.19" %}
+{% set maturin_version = ">=1.4.0,<2" %}
+{% set version = "0.8.25" %}
 
 package:
   name: pycrdt
@@ -20,7 +21,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pycrdt/pycrdt-{{ version }}.tar.gz
-  sha256: 1a3f9e8e03de6ef800e34763cd2ca8b01b3c90ec7423a352d551a51004a73d29
+  sha256: 30b8e6e8252805e18b1feb14a4bda12e35f10ce71a58ca3821bc26813f535274
 
 build:
   number: 0
@@ -36,6 +37,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - maturin {{ maturin_version }}          # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
   host:
