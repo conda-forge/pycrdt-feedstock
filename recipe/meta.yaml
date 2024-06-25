@@ -1,20 +1,4 @@
 {% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
 {% set version = "0.8.30" %}
 
 package:
@@ -61,6 +45,8 @@ test:
     - pycrdt._array
     - pycrdt._map
     - pycrdt._transaction
+    - pycrdt._undo
+    - pycrdt._sync
 
 about:
   home: https://github.com/jupyter-server/pycrdt
