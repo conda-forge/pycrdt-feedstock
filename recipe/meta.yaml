@@ -1,20 +1,5 @@
 {% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set version = "0.8.27" %}
+{% set version = "0.8.30" %}
 
 package:
   name: pycrdt
@@ -22,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pycrdt/pycrdt-{{ version }}.tar.gz
-  sha256: a486a967ab82d92e51211757d888367b9d1882cfd4db6199485a8fd3d2271dce
+  sha256: 3bf34a8f463c20d49520b623cacdc2292508e0b6f411365e2aea2a46dbef3adf
 
 build:
   number: 0
@@ -60,6 +45,8 @@ test:
     - pycrdt._array
     - pycrdt._map
     - pycrdt._transaction
+    - pycrdt._undo
+    - pycrdt._sync
 
 about:
   home: https://github.com/jupyter-server/pycrdt
