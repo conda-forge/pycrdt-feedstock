@@ -22,17 +22,15 @@ build:
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
+    - python
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - maturin {{ maturin_version }}          # [build_platform != target_platform]
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - {{ stdlib('c') }}
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
+    - maturin
   host:
-    - maturin {{ maturin_version }}
+    - maturin
     - pip
     - python
   run:
