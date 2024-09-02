@@ -1,9 +1,4 @@
 {% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
 {% set version = "0.9.11" %}
 
 package:
@@ -35,6 +30,7 @@ requirements:
     - python
   run:
     - python
+    - anyio >=4.4.0,<5.0.0
 
 test:
   requires:
