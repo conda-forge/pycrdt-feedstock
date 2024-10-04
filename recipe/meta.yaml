@@ -1,6 +1,4 @@
 {% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
 {% set version = "0.9.16" %}
 
 package:
@@ -41,12 +39,14 @@ test:
     - pip check
   imports:
     - pycrdt
+    - pycrdt._awareness
     - pycrdt._doc
     - pycrdt._text
     - pycrdt._array
     - pycrdt._map
     - pycrdt._transaction
     - pycrdt._undo
+    - pycrdt._update
     - pycrdt._sync
 
 about:
