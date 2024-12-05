@@ -1,10 +1,4 @@
 {% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
 {% set version = "0.10.7" %}
 
 package:
@@ -16,7 +10,7 @@ source:
   sha256: 78f00893c1fca2881cb6a552ed2309ab94538e2eb476d2d8c657dd971ff3f683
 
 build:
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . -vv
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
