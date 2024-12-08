@@ -1,5 +1,6 @@
 {% set maturin_version = ">=1.4.0,<2" %}
-{% set version = "0.10.7" %}
+{% set maturin_version = ">=1.4.0,<2" %}
+{% set version = "0.10.8" %}
 
 package:
   name: pycrdt
@@ -7,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pycrdt/pycrdt-{{ version }}.tar.gz
-  sha256: 78f00893c1fca2881cb6a552ed2309ab94538e2eb476d2d8c657dd971ff3f683
+  sha256: 7493d1fa4539b0b32a71c7830391e09e0a2893dcf5faa365d226681d05e522f6
 
 build:
-  number: 1
+  number: 0
   script:
     - {{ PYTHON }} -m pip install . -vv
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
