@@ -39,6 +39,7 @@ requirements:
   run:
     - python
     - anyio >=4.4.0,<5.0.0
+    - importlib_metadata >=3.6
 
 test:
   requires:
