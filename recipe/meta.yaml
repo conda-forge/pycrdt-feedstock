@@ -1,14 +1,4 @@
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
-{% set maturin_version = ">=1.4.0,<2" %}
+{% set maturin_version = ">=1.8.2,<2" %}
 {% set version = "0.12.9" %}
 
 package:
@@ -69,6 +59,7 @@ about:
     - THIRDPARTY.yml
   summary: CRDTs based on Yrs
   dev_url: https://github.com/jupyter-server/pycrdt
+  doc_url: https://jupyter-server.github.io/pycrdt
 
 extra:
   recipe-maintainers:
