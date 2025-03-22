@@ -11,6 +11,8 @@ Summary: CRDTs based on Yrs
 
 Development: https://github.com/jupyter-server/pycrdt
 
+Documentation: https://jupyter-server.github.io/pycrdt
+
 Current build status
 ====================
 
