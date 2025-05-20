@@ -1,17 +1,12 @@
 {% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set version = "0.12.15" %}
+{% set version = "0.12.19" %}
 
 package:
   name: pycrdt
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/c0/d6/755693903f077123f07eafd554bf8c992785bf581c61d5eb8ae1143db1dc/pycrdt-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/5b/b8/071b57bd2ca742ea9759668c0da750e8f651597abd399d388bc8f497ee72/pycrdt-{{ version }}.tar.gz
   sha256: 1f9002840907eb9ee402c5cb8eea77330b98289e823acca7cf9d51f84ccad754
 
 build:
@@ -56,14 +51,14 @@ test:
     - pycrdt._sync
 
 about:
-  home: https://github.com/jupyter-server/pycrdt
+  home: https://github.com/y-crdt/pycrdt
   license: MIT
   license_family: MIT
   license_file:
     - LICENSE
     - THIRDPARTY.yml
   summary: CRDTs based on Yrs
-  dev_url: https://github.com/jupyter-server/pycrdt
+  dev_url: https://github.com/y-crdt/pycrdt
   doc_url: https://jupyter-server.github.io/pycrdt
 
 extra:
