@@ -1,6 +1,4 @@
 {% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
 {% set version = "0.12.23" %}
 
 package:
@@ -34,6 +32,7 @@ requirements:
     - python
     - anyio >=4.4.0,<5.0.0
     - importlib_metadata >=3.6
+    - typing_extensions >=4.14.0
 
 test:
   requires:
