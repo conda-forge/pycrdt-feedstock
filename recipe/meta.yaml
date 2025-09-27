@@ -1,8 +1,4 @@
 {% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
 {% set version = "0.12.35" %}
 
 package:
@@ -14,7 +10,7 @@ source:
   sha256: 24e37f98c67b952e9b6e5481ad31900350dcc534d3bf68f3df30a51e4883bfcd
 
 build:
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . -vv
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
@@ -64,7 +60,7 @@ about:
     - THIRDPARTY.yml
   summary: CRDTs based on Yrs
   dev_url: https://github.com/y-crdt/pycrdt
-  doc_url: https://jupyter-server.github.io/pycrdt
+  doc_url: https://y-crdt.github.io/pycrdt
 
 extra:
   recipe-maintainers:
