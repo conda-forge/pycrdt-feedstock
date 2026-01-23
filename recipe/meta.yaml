@@ -1,11 +1,6 @@
+
 {% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set version = "0.12.44" %}
+{% set version = "0.12.45" %}
 
 package:
   name: pycrdt
@@ -13,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pycrdt/pycrdt-{{ version }}.tar.gz
-  sha256: afd317f540ca6c7c830bfadda26f26b811681e70fe1a260894065d3b8f5b359c
+  sha256: 0a770b43a629be8f687e505bb18f7edd6780bb7abaadf2527cf4641bdf960414
 
 build:
   number: 0
@@ -38,6 +33,7 @@ requirements:
     - python
     - anyio >=4.4.0,<5.0.0
     - typing_extensions >=4.14.0
+    - exceptiongroup
 
 test:
   requires:
