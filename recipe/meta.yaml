@@ -6,7 +6,8 @@
 {% set maturin_version = ">=1.8.2,<2" %}
 {% set maturin_version = ">=1.8.2,<2" %}
 {% set maturin_version = ">=1.8.2,<2" %}
-{% set version = "0.14.5" %}
+{% set maturin_version = ">=1.8.2,<2" %}
+{% set version = "0.14.6" %}
 
 package:
   name: pycrdt
@@ -14,7 +15,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/p/pycrdt/pycrdt-{{ version }}.tar.gz
-  sha256: 14fddab58ca4e19ec3b924bb838b29b8cc062da9490084a9454c131d7905950e
+  sha256: ed59185cc0aec28d2fe2d92277a65af6ef799efcf5c5fe99303018cfc5d84428
 
 build:
   number: 0
