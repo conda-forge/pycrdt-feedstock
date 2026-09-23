@@ -1,35 +1,30 @@
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set maturin_version = ">=1.8.2,<2" %}
-{% set version = "0.14.6" %}
+schema_version: 1
+
+context:
+  version: "0.14.6"
 
 package:
   name: pycrdt
-  version: {{ version }}
+  version: ${{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/source/p/pycrdt/pycrdt-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/p/pycrdt/pycrdt-${{ version }}.tar.gz
   sha256: ed59185cc0aec28d2fe2d92277a65af6ef799efcf5c5fe99303018cfc5d84428
 
 build:
   number: 0
   script:
-    - {{ PYTHON }} -m pip install . -vv
+    - ${{ PYTHON }} -m pip install . -vv
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
 
 requirements:
   build:
     - python
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - {{ compiler('c') }}
-    - {{ stdlib('c') }}
-    - {{ compiler('rust') }}
+    - if: build_platform != target_platform
+      then: cross-python_${{ target_platform }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+    - ${{ compiler('rust') }}
     - cargo-bundle-licenses
     - maturin
   host:
@@ -43,33 +38,30 @@ requirements:
     - exceptiongroup
     - typing_extensions >=4.15.0,<5.0.0
 
-test:
-  requires:
-    - pip
-  commands:
-    - pip check
-  imports:
-    - pycrdt
-    - pycrdt._awareness
-    - pycrdt._doc
-    - pycrdt._text
-    - pycrdt._array
-    - pycrdt._map
-    - pycrdt._transaction
-    - pycrdt._undo
-    - pycrdt._update
-    - pycrdt._sync
+tests:
+  - python:
+      imports:
+        - pycrdt
+        - pycrdt._awareness
+        - pycrdt._doc
+        - pycrdt._text
+        - pycrdt._array
+        - pycrdt._map
+        - pycrdt._transaction
+        - pycrdt._undo
+        - pycrdt._update
+        - pycrdt._sync
+      pip_check: true
 
 about:
-  home: https://github.com/y-crdt/pycrdt
   license: MIT
-  license_family: MIT
   license_file:
     - LICENSE
     - THIRDPARTY.yml
   summary: CRDTs based on Yrs
-  dev_url: https://github.com/y-crdt/pycrdt
-  doc_url: https://y-crdt.github.io/pycrdt
+  homepage: https://github.com/y-crdt/pycrdt
+  repository: https://github.com/y-crdt/pycrdt
+  documentation: https://y-crdt.github.io/pycrdt
 
 extra:
   recipe-maintainers:
