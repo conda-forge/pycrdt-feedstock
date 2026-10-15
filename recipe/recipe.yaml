@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   version: "0.14.9"
-  python_check_max: "3.14"
+  python_check_max: "3.15"
 
 package:
   name: pycrdt
@@ -14,7 +14,7 @@ source:
   sha256: cbf33a660b278c6c9d4d9851bd3407d9d54666efd452040ee6e8f2a1907bdb15
 
 build:
-  number: 0
+  number: 1
   skip: is_abi3 and not is_python_min
   python:
     version_independent: ${{ is_abi3 }}
