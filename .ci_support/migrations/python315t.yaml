@@ -1,0 +1,33 @@
+# Apply after python314t, which extends the Python zip with is_abi3.
+migrator_ts: 1755739494
+__migrator:
+  # Keep this feedstock-local migration until conda-forge provides python315t.
+  use_local: true
+  commit_message: Rebuild for python 3.15 freethreading
+  migration_number: 1
+  operation: key_add
+  primary_key: python
+  ordering:
+    python:
+      - 3.9.* *_cpython
+      - 3.10.* *_cpython
+      - 3.11.* *_cpython
+      - 3.12.* *_cpython
+      - 3.13.* *_cp313
+      - 3.13.* *_cp313t
+      - 3.14.* *_cp314
+      - 3.14.* *_cp314t
+      - 3.15.* *_cp315
+      - 3.15.* *_cp315t
+  additional_zip_keys:
+    - is_freethreading
+    - is_abi3
+
+python:
+  - 3.15.* *_cp315t
+is_freethreading:
+  - true
+is_python_min:
+  - false
+is_abi3:
+  - false
