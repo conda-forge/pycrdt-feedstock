@@ -51,7 +51,7 @@ requirements:
         - python-abi3
   run:
     - python
-    - anyio >=4.4.0,<5.0.0
+    - anyio >=4.14.0,<5.0.0
     - if: is_abi3
       then:
         - python >=${{ python_min }}
