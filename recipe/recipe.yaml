@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.14.9"
+  version: "0.14.10"
   python_check_max: "3.15"
 
 package:
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/p/pycrdt/pycrdt-${{ version }}.tar.gz
-  sha256: cbf33a660b278c6c9d4d9851bd3407d9d54666efd452040ee6e8f2a1907bdb15
+  sha256: 55e551682a393a05a2cf531be3adb2e1e70e383fcc4917c3e5440f3cf3b8c674
 
 build:
-  number: 1
+  number: 0
   skip: is_abi3 and not is_python_min
   python:
     version_independent: ${{ is_abi3 }}
