@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.14.10"
+  version: "0.14.13"
   python_check_max: "3.15"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/p/pycrdt/pycrdt-${{ version }}.tar.gz
-  sha256: 55e551682a393a05a2cf531be3adb2e1e70e383fcc4917c3e5440f3cf3b8c674
+  sha256: cbed47427bf9d6f9dd77763749354a7d991f55581d6b917f2823c03095d55988
 
 build:
   number: 0
